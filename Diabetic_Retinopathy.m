@@ -1,4 +1,3 @@
-function result = processImage(ImagePath);
 %%
 [file, path] = uigetfile('C:\Users\Rakshit Preran B\Downloads\TK166370\TK166370 - AMD diagnosis using OCT images and Diabetic diagnosis using Fundus Images in Matlab\CODE\TESTDATA_DR\.', 'Select an image');
 img = imread([path, file]); 
@@ -113,10 +112,9 @@ fprintf('The training accuracy by Inception V3 Net is %0.4f\n', mean(DR_training
 YValidation = imdsValidation.Labels;
 
 % Calculate confusion matrix
-[m,order] = confusionmat(YValidation, YPred_data);
-figure
-cm = confusionchart(m,order);
-
+%[m,order] = confusionmat(YValidation, YPred_data);
+%figure
+%cm = confusionchart(m,order);
 %%
 output = char(YPred);
 
@@ -168,9 +166,7 @@ if strcmp(output, 'Diabetic Retinopathy')
        DiseaseYValidation = DiseaseimdsValidation.Labels;
        
        % Calculate confusion matrix
-       [Diseasem,Diseaseorder] = confusionmat(DiseaseYValidation, DiseaseYPred_data);
-       figure
-       cm = confusionchart(Diseasem,Diseaseorder);
-end
-
+       %[Diseasem,Diseaseorder] = confusionmat(DiseaseYValidation, DiseaseYPred_data);
+       %figure
+       %cm = confusionchart(Diseasem,Diseaseorder);
 end

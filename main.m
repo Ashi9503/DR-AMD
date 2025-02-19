@@ -3,6 +3,7 @@ clear all;
 close all;
 close all hidden;
 warning off;
+
 %% Selection Dialogue Box
 message = "Choose your Selection of Work";
 options = [
@@ -20,3 +21,4 @@ elseif choice == 2
 else
     disp("No selection made. Please choose an option.");
 end
+%%

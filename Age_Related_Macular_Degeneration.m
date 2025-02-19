@@ -162,4 +162,4 @@ if strcmp(output, 'Age-related Macular Degeneration')
        figure
        cm = confusionchart(Diseasem,Diseaseorder);
 end
-end
+%%
